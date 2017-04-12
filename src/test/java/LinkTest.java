@@ -1,6 +1,7 @@
 import Link.Iterator;
 import Link.LinkedListDLNode;
 import Link.ListSLinked;
+import com.sun.org.apache.xpath.internal.SourceTree;
 import org.junit.Test;
 
 /**
@@ -52,13 +53,19 @@ public class LinkTest {
     @Test
     public void test2(){
         LinkedListDLNode linkedListDLNode = new LinkedListDLNode();
-        for(int i=0;i<10;i++){
+        //测试插入元素
+        for(int i=10;i>0;i--){
             linkedListDLNode.insertFirst("kim-"+i);
         }
         System.out.print("【所有元素】");
         Iterator iterator = linkedListDLNode.elements();
         while(iterator.currentItem()!=null){
-            System.out.println(iterator.currentItem()+",");
+            System.out.print(iterator.currentItem()+",");
+            iterator.next();
         }
+        //测试获取第一个和最后一个
+        System.out.println();
+        System.out.println("【第一个元素】"+linkedListDLNode.getFirst().getData());
+        System.out.println("【最后一个元素】"+linkedListDLNode.getLast().getData());
     }
 }

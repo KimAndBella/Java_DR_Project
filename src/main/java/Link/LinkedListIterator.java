@@ -39,7 +39,8 @@ public class LinkedListIterator implements Iterator {
 
     public Object currentItem() {
         if(isDone()){
-            throw new OutOfBoundaryException("错误：已经没有元素");
+//            throw new OutOfBoundaryException("错误：已经没有元素");
+            return null;
         }
         return current.getData();
     }

@@ -36,6 +36,6 @@ public class DLNode implements Node {
     }
 
     public void setData(Object data) {
-        this.object = object;
+        this.object = data;
     }
 }
