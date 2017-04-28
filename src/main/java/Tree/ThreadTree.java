@@ -32,8 +32,8 @@ public class ThreadTree {
         if(root != null){
             inThread(root.getLeft());
             if(root.getLeft() == null){
-                root.setLeftIsThread(true);
-                root.set
+//                root.setLeftIsThread(true);
+//                root.set
             }
         }
     }
